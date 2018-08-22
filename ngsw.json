@@ -9,10 +9,11 @@
       "urls": [
         "https://c3rberuss.github.io/SDS2018/favicon.ico",
         "https://c3rberuss.github.io/SDS2018/index.html",
-        "https://c3rberuss.github.io/SDS2018/main.d9a155804be79857df41.js",
-        "https://c3rberuss.github.io/SDS2018/polyfills.2f4a59095805af02bd79.js",
+        "https://c3rberuss.github.io/SDS2018/main.5525496e1b9cb29ed876.js",
+        "https://c3rberuss.github.io/SDS2018/polyfills.9f3fa006ba213e86e40a.js",
         "https://c3rberuss.github.io/SDS2018/runtime.a66f828dca56eeb90e02.js",
-        "https://c3rberuss.github.io/SDS2018/styles.34c57ab7888ec1573f9c.css"
+        "https://c3rberuss.github.io/SDS2018/scripts.a1157d724f3cfdfaa9a8.js",
+        "https://c3rberuss.github.io/SDS2018/styles.d23af23fcee1d585bc54.css"
       ],
       "patterns": []
     },
@@ -44,11 +45,12 @@
     "https://c3rberuss.github.io/SDS2018/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
     "https://c3rberuss.github.io/SDS2018/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
     "https://c3rberuss.github.io/SDS2018/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
-    "https://c3rberuss.github.io/SDS2018/index.html": "62d19dedad1dc2057c64880c066e7e015b252b14",
-    "https://c3rberuss.github.io/SDS2018/main.d9a155804be79857df41.js": "3565cd5b1313e63c16672134100fedf5d2243d3d",
-    "https://c3rberuss.github.io/SDS2018/polyfills.2f4a59095805af02bd79.js": "8949bb1b1e302dda246f6ed9c2da703270360b1f",
+    "https://c3rberuss.github.io/SDS2018/index.html": "d83cd62e24fdec3f01e26ddf3ca12b360577caf0",
+    "https://c3rberuss.github.io/SDS2018/main.5525496e1b9cb29ed876.js": "1606085d02ffb87f3e9919878b036d976c963218",
+    "https://c3rberuss.github.io/SDS2018/polyfills.9f3fa006ba213e86e40a.js": "b26fc71f31c8ec3d9c780c77d1ae42b6a972525f",
     "https://c3rberuss.github.io/SDS2018/runtime.a66f828dca56eeb90e02.js": "078e320cc6fdaf355836c3b1c52b059cdd33fc7e",
-    "https://c3rberuss.github.io/SDS2018/styles.34c57ab7888ec1573f9c.css": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+    "https://c3rberuss.github.io/SDS2018/scripts.a1157d724f3cfdfaa9a8.js": "15102f5a8b4441436291923ec065c9c850615275",
+    "https://c3rberuss.github.io/SDS2018/styles.d23af23fcee1d585bc54.css": "88746a94893feb1323b0cdd777879b6989830955"
   },
   "navigationUrls": [
     {
