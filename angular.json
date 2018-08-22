@@ -24,9 +24,26 @@
               "src/manifest.json"
             ],
             "styles": [
-              "src/styles.css"
+              //"node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/template/assets/css/bootstrap/bootstrap.css",
+              "src/template/assets/css/animate.css",
+              "src/template/assets/fonts/ionicons/css/ionicons.min.css",
+              "src/template/assets/fonts/fontawesome/css/font-awesome.min.css",
+              "src/template/assets/css/slick.css",
+              "src/template/assets/css/slick-theme.css",
+              "src/template/assets/css/helpers.css",
+              "src/template/assets/css/style.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/template/assets/js/jquery.min.js",
+              "src/template/assets/js/popper.min.js",
+              "src/template/assets/js/bootstrap.min.js",
+              "src/template/assets/js/slick.min.js",
+              "src/template/assets/js/jquery.mb.YTPlayer.min.js",
+              "src/template/assets/js/jquery.waypoints.min.js",
+              "src/template/assets/js/jquery.easing.1.3.js",
+              "src/template/assets/js/main.js"
+            ]
           },
           "configurations": {
             "production": {
