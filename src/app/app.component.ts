@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,23 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'SDS2018';
-
-    people: any[] = [
-        {
-            'name': 'Douglas  Pace'
-        },
-        {
-            'name': 'Mcleod  Mueller'
-        },
-        {
-            'name': 'Day  Meyers'
-        },
-        {
-            'name': 'Aguirre  Ellis'
-        },
-        {
-            'name': 'Cook  Tyson'
-        }
-    ];
 
 }

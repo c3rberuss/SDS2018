@@ -24,8 +24,7 @@
               "src/manifest.json"
             ],
             "styles": [
-              //"node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "src/template/assets/css/bootstrap/bootstrap.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/template/assets/css/animate.css",
               "src/template/assets/fonts/ionicons/css/ionicons.min.css",
               "src/template/assets/fonts/fontawesome/css/font-awesome.min.css",
