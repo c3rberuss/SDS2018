@@ -1,0 +1,45 @@
+<section class="probootstrap_section bg-light" id="section-add-guest">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7 probootstrap-animate">
+                <form [formGroup]="form" (ngSubmit)="crear(form.value)"
+                      class="probootstrap-form probootstrap-form-box mb60">
+
+                    <input type="text" formControlName="id" hidden>
+
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" formControlName="nombre">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nacionalidad">Nacionalidad</label>
+                        <input type="text" class="form-control" id="nacionalidad" formControlName="nacionalidad">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bio">Biografía</label>
+                        <textarea id="bio" rows="4" class="form-control" formControlName="bio"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="profesion">Profesión</label>
+                        <input type="text" class="form-control" id="profesion" formControlName="profesion">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="foto_url">Fotografía</label>
+                        <input type="file" class="form-control-file" id="foto_url" formControlName="foto_url"
+                               accept="image/png, image/jpeg" (change)="select_file($event)">
+                    </div>
+
+                    <button class="btn btn-primary" [disabled]="!form.valid">Agregar</button>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+</section>
