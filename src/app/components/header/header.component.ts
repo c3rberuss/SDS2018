@@ -9,9 +9,9 @@ export class HeaderComponent implements OnInit {
 
     menus = [
         {text: 'Inicio', url: '#section-home', enabled: true},
-        {text: 'Acerca de', url: '#section-about', enabled: true},
-        {text: 'Servicios', url: '#section-services', enabled: true},
-        {text: 'Productos', url: '#section-products', enabled: true},
+        {text: 'Talleristas y Ponentes', url: '#section-about', enabled: true},
+        {text: 'Actividades', url: '#section-services', enabled: true},
+        {text: 'Inscripciones', url: '#section-products', enabled: true},
         {text: 'Contacto', url: '#section-contact', enabled: true}
     ];
 
