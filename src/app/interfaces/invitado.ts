@@ -6,5 +6,6 @@ export interface Invitado {
     bio?: string;
     profesion?: string;
     foto_url?: string;
+    extranjeto?: boolean;
 
 }

@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {InvitadosService} from '../../services/invitados.service';
 
 @Component({
     selector: 'app-about',
@@ -7,13 +8,16 @@ import {Component, OnInit} from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-    constructor() {
+    extranjeros: any;
+    nacionales: any;
 
-        console.log('Iniciado About');
-
+    constructor(private invitados: InvitadosService) {
+        this.extranjeros = this.invitados.get_invitados_inter().valueChanges();
+        this.nacionales = this.invitados.get_invitados_nac().valueChanges();
     }
 
     ngOnInit() {
+
     }
 
 }

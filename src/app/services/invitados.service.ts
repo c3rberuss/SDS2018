@@ -7,9 +7,9 @@ import {Invitado} from '../interfaces/invitado';
 })
 export class InvitadosService {
 
-    invitado: Invitado;
 
     constructor(public db: AngularFirestore) {
+
     }
 
     crear_invitado(data: Invitado) {
@@ -17,5 +17,13 @@ export class InvitadosService {
         data.id = this.db.createId();
         this.db.doc('invitados/' + data.id).set(data);
 
+    }
+
+    get_invitados_inter() {
+        return this.db.collection('invitados', ref => ref.where('extranjero', '==', true).orderBy('nacionalidad'));
+    }
+
+    get_invitados_nac() {
+        return this.db.collection('invitados', ref => ref.where('extranjero', '==', false).orderBy('nacionalidad'));
     }
 }

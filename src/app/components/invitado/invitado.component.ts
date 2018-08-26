@@ -14,16 +14,20 @@ export class InvitadoComponent implements OnInit {
 
     form: FormGroup;
     file: any;
+    extranjero: boolean;
+    invitados_extranjeros: any;
 
     constructor(private formBuilder: FormBuilder, private invitadoService: InvitadosService, private storage: AngularFireStorage) {
 
+        this.extranjero = false;
         this.form = this.formBuilder.group({
-            id: ['0000000000'],
+            id: '0000000000',
             nombre: ['', [
                 Validators.required,
                 Validators.minLength(15)
             ]],
-            nacionalidad: ['', [
+            extranjero: false,
+            nacionalidad: [{value: 'Salvadoreña', disabled: true}, [
                 Validators.required,
                 Validators.minLength(10)
             ]],
@@ -40,11 +44,18 @@ export class InvitadoComponent implements OnInit {
 
     }
 
+    active() {
+        this.extranjero ? this.form.controls.nacionalidad.disable() : this.form.controls.nacionalidad.enable();
+        this.extranjero = !this.extranjero;
+    }
+
     crear(data: Invitado) {
         console.log(data);
+        console.log(this.form);
 
-        let storageRef = firebase.storage().ref();
-        let uploadTask = storageRef.child(`/fotos/${this.file.name}`).put(this.file);
+
+        const storageRef = firebase.storage().ref();
+        const uploadTask = storageRef.child(`/fotos/${this.file.name}`).put(this.file);
 
         uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED,
             (snapshot) => {
@@ -58,7 +69,11 @@ export class InvitadoComponent implements OnInit {
             () => {
                 // upload success
                 data.foto_url = `https://firebasestorage.googleapis.com/v0/b/sds2018-dev.appspot.com/o/fotos%2F${this.file.name}?alt=media`;
+
+                !data.nacionalidad ? data.nacionalidad = 'Salvadoreña' : data.nacionalidad = data.nacionalidad;
+
                 this.invitadoService.crear_invitado(data);
+                this.form.reset();
             }
         );
 

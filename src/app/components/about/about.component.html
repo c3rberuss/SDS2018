@@ -34,115 +34,58 @@
             </div>
         </div>
 
-      <div class="row justify-content-center mb-5">
-        <div class="col-md-8 text-center mb-5 probootstrap-animate">
-            <h4>PONENTES Y TALLERISTAS NACIONALES</h4>
-          </div>
-          </div>
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-8 text-center mb-5 probootstrap-animate">
+                <h4>PONENTES Y TALLERISTAS NACIONALES</h4>
+            </div>
+        </div>
 
-          <div class="row">
-            <div class="col-md probootstrap-animate">
-              <div class="media d-block text-center testimonial_v1 probootstrap_quote_v1">
-                <div class="media-body">
-                  <div class="quote">&ldquo;</div>
+        <div class="row">
+            <div class="col-md-4" *ngFor="let nac of nacionales | async">
+                <div class="media d-block text-center testimonial_v1 probootstrap_quote_v1">
+                    <div class="media-body">
+                        <div class="quote">&ldquo;</div>
 
-                  <blockquote class="mb-5">[INFO SOBRE TALLERISTA]
-                  </blockquote>
-                  <img class="d-flex text-center mx-auto mb-3 rounded-circle" src="assets/images/person_1.jpg"
-                       alt="Generic placeholder image">
-                  <h3 class="heading">TALLERISTA X</h3>
-                  <p class="subheading">@Twitter_Tallerista</p>
-                  <p><a href="" class="btn btn-primary">VER VIDEO</a></p>
+                        <blockquote class="mb-5">
+                            {{ nac.bio }}
+                        </blockquote>
+                        <img class="d-flex text-center mx-auto mb-3 rounded-circle" [src]="nac.foto_url"
+                             alt="Generic placeholder image">
+                        <h3 class="heading">{{ nac.nombre }}</h3>
+                        <p class="subheading">@Twitter_Tallerista</p>
+                        <p><a href="" class="btn btn-primary">VER VIDEO</a></p>
+                    </div>
                 </div>
-              </div>
             </div>
-            <div class="col-md probootstrap-animate">
-              <div class="media d-block text-center testimonial_v1 probootstrap_quote_v1">
-                <div class="media-body">
-                  <div class="quote">&ldquo;</div>
 
-                  <blockquote class="mb-5">[INFO SOBRE TALLERISTA]
-                  </blockquote>
-                  <img class="d-flex text-center mx-auto mb-3 rounded-circle" src="assets/images/person_1.jpg"
-                       alt="Generic placeholder image">
-                  <h3 class="heading">TALLERISTA X</h3>
-                  <p class="subheading">@Twitter_Tallerista</p>
-                  <p><a href="" class="btn btn-primary">VER VIDEO</a></p>
+        </div>
+
+
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-8 text-center mb-5 probootstrap-animate">
+                <h4><br><br><br>PONENTES Y TALLERISTAS INTERNACIONALES</h4>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4" *ngFor="let invitado of extranjeros | async">
+                <div class="media d-block text-center testimonial_v1 probootstrap_quote_v1">
+                    <div class="media-body">
+                        <div class="quote">&ldquo;</div>
+
+                        <blockquote class="mb-5">
+                            {{ invitado.bio }}
+                        </blockquote>
+                        <img class="d-flex text-center mx-auto mb-3 rounded-circle" [src]="invitado.foto_url"
+                             alt="Generic placeholder image">
+                        <h3 class="heading">{{ invitado.nombre }}</h3>
+                        <p class="subheading">@Twitter_Tallerista</p>
+                        <p><a href="" class="btn btn-primary">VER VIDEO</a></p>
+                    </div>
                 </div>
-              </div>
             </div>
-            <div class="col-md probootstrap-animate">
-              <div class="media d-block text-center testimonial_v1 probootstrap_quote_v1">
-                <div class="media-body">
-                  <div class="quote">&ldquo;</div>
 
-                  <blockquote class="mb-5">[INFO SOBRE TALLERISTA]
-                  </blockquote>
-                  <img class="d-flex text-center mx-auto mb-3 rounded-circle" src="assets/images/person_1.jpg"
-                       alt="Generic placeholder image">
-                  <h3 class="heading">TALLERISTA X</h3>
-                  <p class="subheading">@Twitter_Tallerista</p>
-                  <p><a href="" class="btn btn-primary">VER VIDEO</a></p>
-                </div>
-              </div>
-          </div>
         </div>
-
-
-
-      <div class="row justify-content-center mb-5">
-        <div class="col-md-8 text-center mb-5 probootstrap-animate">
-          <h4><br><br><br>PONENTES Y TALLERISTAS INTERNACIONALES</h4>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md probootstrap-animate">
-          <div class="media d-block text-center testimonial_v1 probootstrap_quote_v1">
-            <div class="media-body">
-              <div class="quote">&ldquo;</div>
-
-              <blockquote class="mb-5">[INFO SOBRE TALLERISTA INTERNACIONAL]
-              </blockquote>
-              <img class="d-flex text-center mx-auto mb-3 rounded-circle" src="assets/images/person_1.jpg"
-                   alt="Generic placeholder image">
-              <h3 class="heading">TALLERISTA X</h3>
-              <p class="subheading">@Twitter_Tallerista</p>
-              <p><a href="" class="btn btn-primary">VER VIDEO</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md probootstrap-animate">
-          <div class="media d-block text-center testimonial_v1 probootstrap_quote_v1">
-            <div class="media-body">
-              <div class="quote">&ldquo;</div>
-
-              <blockquote class="mb-5">[INFO SOBRE TALLERISTA INTERNACIONAL]
-              </blockquote>
-              <img class="d-flex text-center mx-auto mb-3 rounded-circle" src="assets/images/person_1.jpg"
-                   alt="Generic placeholder image">
-              <h3 class="heading">TALLERISTA X</h3>
-              <p class="subheading">@Twitter_Tallerista</p>
-              <p><a href="" class="btn btn-primary">VER VIDEO</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md probootstrap-animate">
-          <div class="media d-block text-center testimonial_v1 probootstrap_quote_v1">
-            <div class="media-body">
-              <div class="quote">&ldquo;</div>
-
-              <blockquote class="mb-5">[INFO SOBRE TALLERISTA INTERNACIONAL]
-              </blockquote>
-              <img class="d-flex text-center mx-auto mb-3 rounded-circle" src="assets/images/person_1.jpg"
-                   alt="Generic placeholder image">
-              <h3 class="heading">TALLERISTA X</h3>
-              <p class="subheading">@Twitter_Tallerista</p>
-              <p><a href="" class="btn btn-primary">VER VIDEO</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
 </section>
 <!-- END section -->

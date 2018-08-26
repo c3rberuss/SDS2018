@@ -13,6 +13,12 @@
                         <input type="text" class="form-control" id="nombre" formControlName="nombre">
                     </div>
 
+                    <div class="form-check form-group">
+                        <input type="checkbox" class="form-check-input" id="extranjero" formControlName="extranjero"
+                               (change)="active()">
+                        <label for="extranjero">Extranjero</label>
+                    </div>
+
                     <div class="form-group">
                         <label for="nacionalidad">Nacionalidad</label>
                         <input type="text" class="form-control" id="nacionalidad" formControlName="nacionalidad">
