@@ -4,14 +4,20 @@ import {NgModule} from '@angular/core';
 import {AppComponent} from './app.component';
 import {ServiceWorkerModule} from '@angular/service-worker';
 import {environment} from '../environments/environment';
-import {HomeComponent} from './home/home.component';
+import {HomeComponent} from './components/home/home.component';
 // import { Routes, RouterModule } from '@angular/router';
-import {AboutComponent} from './about/about.component';
-import {ServicesComponent} from './services/services.component';
-import {ProductsComponent} from './products/products.component';
-import {ContactComponent} from './contact/contact.component';
-import {FooterComponent} from './footer/footer.component';
-import {HeaderComponent} from './header/header.component';
+import {AboutComponent} from './components/about/about.component';
+import {ServicesComponent} from './components/services/services.component';
+import {ProductsComponent} from './components/products/products.component';
+import {ContactComponent} from './components/contact/contact.component';
+import {FooterComponent} from './components/footer/footer.component';
+import {HeaderComponent} from './components/header/header.component';
+
+import {AngularFireModule} from 'angularfire2';
+import {AngularFirestoreModule} from 'angularfire2/firestore';
+import {InvitadoComponent} from './components/invitado/invitado.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {AngularFireStorage} from 'angularfire2/storage';
 
 
 // const routes: Routes = [
@@ -27,21 +33,29 @@ import {HeaderComponent} from './header/header.component';
 
 
 @NgModule({
-  declarations: [
-    AppComponent,
-      HomeComponent,
-      AboutComponent,
-      ServicesComponent,
-      ProductsComponent,
-      ContactComponent,
-      FooterComponent,
-      HeaderComponent
-  ],
-  imports: [
-    BrowserModule,
-      ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production})
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        HomeComponent,
+        AboutComponent,
+        ServicesComponent,
+        ProductsComponent,
+        ContactComponent,
+        FooterComponent,
+        HeaderComponent,
+        InvitadoComponent
+    ],
+    imports: [
+        BrowserModule,
+        ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production}),
+        AngularFireModule.initializeApp(environment.firebase),
+        AngularFirestoreModule.enablePersistence(),
+        FormsModule,
+        ReactiveFormsModule
+    ],
+    providers: [
+        AngularFireStorage
+    ],
+    bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

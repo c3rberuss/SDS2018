@@ -31,10 +31,7 @@
             <div class="col-md-3">
                 <h3 class="probootstrap_font-18 mb-3">Quick Links</h3>
                 <ul class="list-unstyled">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li *ngFor="let link of data | async"><a href="#">{{ link.enlace }}</a></li>
                 </ul>
             </div>
         </div>

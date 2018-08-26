@@ -8,11 +8,8 @@
         </button>
         <div class="collapse navbar-collapse" id="probootstrap-menu">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="nav-link" href="#section-home">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#section-about">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="#section-services">Services</a></li>
-                <li class="nav-item"><a class="nav-link" href="#section-products">Products</a></li>
-                <li class="nav-item"><a class="nav-link" href="#section-contact">Contact</a></li>
+                <li class="nav-item" *ngFor="let link of menus"><a class="nav-link" [href]="link.url"
+                                                                   *ngIf="link.enabled">{{ link.text }}</a></li>
             </ul>
         </div>
     </div>
