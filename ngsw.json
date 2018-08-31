@@ -9,11 +9,11 @@
       "urls": [
         "https://c3rberuss.github.io/SDS2018/favicon.ico",
         "https://c3rberuss.github.io/SDS2018/index.html",
-        "https://c3rberuss.github.io/SDS2018/main.2577739deef6e9c0508c.js",
+        "https://c3rberuss.github.io/SDS2018/main.a379b7dfa9e9e7a300a9.js",
         "https://c3rberuss.github.io/SDS2018/polyfills.9f3fa006ba213e86e40a.js",
         "https://c3rberuss.github.io/SDS2018/runtime.a66f828dca56eeb90e02.js",
         "https://c3rberuss.github.io/SDS2018/scripts.a1157d724f3cfdfaa9a8.js",
-        "https://c3rberuss.github.io/SDS2018/styles.19579dda797f48ed37b1.css"
+        "https://c3rberuss.github.io/SDS2018/styles.f635431f689fc89c2eb6.css"
       ],
       "patterns": []
     },
@@ -33,7 +33,12 @@
         "https://c3rberuss.github.io/SDS2018/assets/images/23.jpg",
         "https://c3rberuss.github.io/SDS2018/assets/images/8.jpg",
         "https://c3rberuss.github.io/SDS2018/assets/images/Logo ASEIS.png",
-        "https://c3rberuss.github.io/SDS2018/assets/images/Running-Code.gif"
+        "https://c3rberuss.github.io/SDS2018/assets/images/Running-Code.gif",
+        "https://c3rberuss.github.io/SDS2018/assets/images/img_1.jpg",
+        "https://c3rberuss.github.io/SDS2018/assets/images/img_2.jpg",
+        "https://c3rberuss.github.io/SDS2018/assets/images/img_3.jpg",
+        "https://c3rberuss.github.io/SDS2018/assets/images/img_4.jpg",
+        "https://c3rberuss.github.io/SDS2018/assets/images/img_5.jpg"
       ],
       "patterns": []
     }
@@ -52,13 +57,18 @@
     "https://c3rberuss.github.io/SDS2018/assets/images/8.jpg": "f59c93cc3151ae7016ca15e8f21b9b08451dffd3",
     "https://c3rberuss.github.io/SDS2018/assets/images/Logo ASEIS.png": "4d263752a86a5a59cea77c3be6922081c736614b",
     "https://c3rberuss.github.io/SDS2018/assets/images/Running-Code.gif": "b41981a0db928353bc9953cc05850b0793f409cc",
+    "https://c3rberuss.github.io/SDS2018/assets/images/img_1.jpg": "5263e8d7b69db733f5abcc4e66c1b22581b1d0ee",
+    "https://c3rberuss.github.io/SDS2018/assets/images/img_2.jpg": "0c421f075da31c0f2c7dd110d016a757145f317b",
+    "https://c3rberuss.github.io/SDS2018/assets/images/img_3.jpg": "924e8dd0309718e44ee3997cef58bd3e682f7a5f",
+    "https://c3rberuss.github.io/SDS2018/assets/images/img_4.jpg": "faf58d3c6fa2e30322e496559bdcbfd30f979218",
+    "https://c3rberuss.github.io/SDS2018/assets/images/img_5.jpg": "48c210fdebfffa746682067cd71b893e01a340eb",
     "https://c3rberuss.github.io/SDS2018/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
-    "https://c3rberuss.github.io/SDS2018/index.html": "f4111055244c2e59c1b3a9c1afece8fcbc929212",
-    "https://c3rberuss.github.io/SDS2018/main.2577739deef6e9c0508c.js": "f926ca18726b19232e0d47956df134bfe111ef14",
+    "https://c3rberuss.github.io/SDS2018/index.html": "1f7e8ee25f38c96c8ae8d24e2cd0747f8d5f864d",
+    "https://c3rberuss.github.io/SDS2018/main.a379b7dfa9e9e7a300a9.js": "53a10191facfc985472fd18373a099ad09d205ed",
     "https://c3rberuss.github.io/SDS2018/polyfills.9f3fa006ba213e86e40a.js": "b26fc71f31c8ec3d9c780c77d1ae42b6a972525f",
     "https://c3rberuss.github.io/SDS2018/runtime.a66f828dca56eeb90e02.js": "078e320cc6fdaf355836c3b1c52b059cdd33fc7e",
     "https://c3rberuss.github.io/SDS2018/scripts.a1157d724f3cfdfaa9a8.js": "15102f5a8b4441436291923ec065c9c850615275",
-    "https://c3rberuss.github.io/SDS2018/styles.19579dda797f48ed37b1.css": "8389501ebf0ab144c8c1a1056caefdd027f11a38"
+    "https://c3rberuss.github.io/SDS2018/styles.f635431f689fc89c2eb6.css": "e3c46529556b8b3f8fb885139e67854b47ef28e3"
   },
   "navigationUrls": [
     {
