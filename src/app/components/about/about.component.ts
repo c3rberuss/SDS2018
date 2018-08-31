@@ -20,4 +20,8 @@ export class AboutComponent implements OnInit {
 
     }
 
+    eliminar(id) {
+        this.invitados.delete_invitado(id);
+    }
+
 }

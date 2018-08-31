@@ -26,8 +26,8 @@
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/template/assets/css/animate.css",
-              "src/template/assets/fonts/ionicons/css/ionicons.min.css",
-              "src/template/assets/fonts/fontawesome/css/font-awesome.min.css",
+              "node_modules/ionicons/dist/css/ionicons.css",
+              "node_modules/font-awesome/css/font-awesome.css",
               "src/template/assets/css/slick.css",
               "src/template/assets/css/slick-theme.css",
               "src/template/assets/css/helpers.css",

@@ -38,6 +38,12 @@
                         <label for="foto_url">Fotografía</label>
                         <input type="file" class="form-control-file" id="foto_url" formControlName="foto_url"
                                accept="image/png, image/jpeg" (change)="select_file($event)">
+                        <br>
+                        <div class="progress" *ngIf="upload_init">
+                            <div class="progress-bar" role="progressbar" [ngStyle]="{width: progress.toString()+'%' }"
+                                 aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ progress.toFixed(0) }}%
+                            </div>
+                        </div>
                     </div>
 
                     <button class="btn btn-primary" [disabled]="!form.valid">Agregar</button>

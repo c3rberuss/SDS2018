@@ -1,6 +1,5 @@
 <section class="probootstrap-section-half d-md-flex" id="section-about">
-    <div class="probootstrap-image probootstrap-animate" data-animate-effect="fadeIn"
-         style="background-image: url(assets/images/8.jpg)"></div>
+    <div class="probootstrap-image probootstrap-animate" data-animate-effect="fadeIn"></div>
     <div class="probootstrap-text">
         <div class="probootstrap-inner probootstrap-animate" data-animate-effect="fadeInRight">
             <h2 class="heading mb-4">PONENCIAS</h2>
@@ -11,8 +10,7 @@
     </div>
 </section>
 <section class="probootstrap-section-half d-md-flex">
-    <div class="probootstrap-image order-2 probootstrap-animate" data-animate-effect="fadeIn"
-         style="background-image: url(assets/images/23.jpg)"></div>
+    <div class="probootstrap-image order-2 probootstrap-animate" data-animate-effect="fadeIn"></div>
     <div class="probootstrap-text order-1">
         <div class="probootstrap-inner probootstrap-animate" data-animate-effect="fadeInLeft">
             <h2 class="heading mb-4">TALLERES</h2>
@@ -54,6 +52,7 @@
                         <h3 class="heading">{{ nac.nombre }}</h3>
                         <p class="subheading">@Twitter_Tallerista</p>
                         <p><a href="" class="btn btn-primary">VER VIDEO</a></p>
+                        <button class="btn btn-danger" (click)="eliminar(nac.id)">Eliminar</button>
                     </div>
                 </div>
             </div>
@@ -81,6 +80,7 @@
                         <h3 class="heading">{{ invitado.nombre }}</h3>
                         <p class="subheading">@Twitter_Tallerista</p>
                         <p><a href="" class="btn btn-primary">VER VIDEO</a></p>
+                        <button class="btn btn-danger" (click)="eliminar(invitado.id)">Eliminar</button>
                     </div>
                 </div>
             </div>

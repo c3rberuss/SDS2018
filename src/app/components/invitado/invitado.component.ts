@@ -15,11 +15,15 @@ export class InvitadoComponent implements OnInit {
     form: FormGroup;
     file: any;
     extranjero: boolean;
-    invitados_extranjeros: any;
+    progress: any;
+    upload_init: boolean;
 
     constructor(private formBuilder: FormBuilder, private invitadoService: InvitadosService, private storage: AngularFireStorage) {
 
+        this.progress = 0;
         this.extranjero = false;
+        this.upload_init = false;
+
         this.form = this.formBuilder.group({
             id: '0000000000',
             nombre: ['', [
@@ -52,15 +56,53 @@ export class InvitadoComponent implements OnInit {
     crear(data: Invitado) {
         console.log(data);
         console.log(this.form);
-
+        this.upload_init = true;
 
         const storageRef = firebase.storage().ref();
         const uploadTask = storageRef.child(`/fotos/${this.file.name}`).put(this.file);
 
+        // // Client-side validation example
+        // if (this.file.type.split('/')[0] !== 'image') {
+        //     console.error('unsupported file type :( ');
+        //     return;
+        // }
+        //
+        // // The storage path
+        // const path = `/fotos/${this.file.name}`;
+        //
+        // // Totally optional metadata
+        // const customMetadata = { app: 'My AngularFire-powered PWA!' };
+        //
+        // // The main task
+        // const task = this.storage.upload(path, this.file, { customMetadata });
+        //
+        // // Progress monitoring
+        // this.progress = task.percentageChanges();
+        // console.log('progress: ', this.progress);
+        // task.then( (a) => {
+        //     console.log('Se ha cargado la imagen');
+        // }, (b) => {
+        //     console.log('Ha ocurrido un error');
+        // });
+        //
+        // const snapshot   = task.snapshotChanges();
+        // snapshot.subscribe((e) => {
+        //
+        // }, (s) => {
+        //
+        // }, (a) => {
+        //
+        // });
+
+
         uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED,
             (snapshot) => {
                 // upload in progress
-                // upload.progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100
+                const snapshotRef = snapshot as firebase.storage.UploadTaskSnapshot;
+                const bytesTransferred = (snapshotRef).bytesTransferred;
+                const totalBytes = (snapshotRef).totalBytes;
+                this.progress = (bytesTransferred / totalBytes) * 100;
+
             },
             (error) => {
                 // upload failed
@@ -74,6 +116,7 @@ export class InvitadoComponent implements OnInit {
 
                 this.invitadoService.crear_invitado(data);
                 this.form.reset();
+                this.upload_init = false;
             }
         );
 

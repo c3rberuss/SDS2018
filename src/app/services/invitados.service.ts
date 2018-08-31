@@ -19,6 +19,10 @@ export class InvitadosService {
 
     }
 
+    delete_invitado(id) {
+        this.db.doc('invitados/' + id).delete();
+    }
+
     get_invitados_inter() {
         return this.db.collection('invitados', ref => ref.where('extranjero', '==', true).orderBy('nacionalidad'));
     }

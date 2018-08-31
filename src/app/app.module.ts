@@ -5,7 +5,7 @@ import {AppComponent} from './app.component';
 import {ServiceWorkerModule} from '@angular/service-worker';
 import {environment} from '../environments/environment';
 import {HomeComponent} from './components/home/home.component';
-// import { Routes, RouterModule } from '@angular/router';
+import {RouterModule, Routes} from '@angular/router';
 import {AboutComponent} from './components/about/about.component';
 import {ServicesComponent} from './components/services/services.component';
 import {ProductsComponent} from './components/products/products.component';
@@ -18,18 +18,15 @@ import {AngularFirestoreModule} from 'angularfire2/firestore';
 import {InvitadoComponent} from './components/invitado/invitado.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {AngularFireStorage} from 'angularfire2/storage';
+import {LoginComponent} from './components/login/login.component';
 
 
-// const routes: Routes = [
-//     { path: '', component: HomeComponent, data: { title: 'Semana de Sistemas' } },
-//     { path: 'home', component: HomeComponent, data: { title: 'Semana de Sistemas' }},
-//     { path: 'about', component: AboutComponent, data: { title: 'About Page' }},
-//     { path: 'products', component: ProductsComponent, data: { title: 'Products Page' } },
-//     { path: 'services', component: ServicesComponent, data: { title: 'Services Page' } },
-//     { path: 'contact', component: ContactComponent, data: { title: 'Contact Page' }},
-//     { path: '**', component: HomeComponent, data: { title: 'Semana de Sistemas' } }
-//
-// ];
+const routes: Routes = [
+    {path: '', component: AppComponent, data: {title: 'Semana de Sistemas'}},
+    {path: 'login', component: LoginComponent, data: {title: 'Login'}},
+    {path: '**', component: AppComponent, data: {title: 'Semana de Sistemas'}}
+
+];
 
 
 @NgModule({
@@ -42,7 +39,8 @@ import {AngularFireStorage} from 'angularfire2/storage';
         ContactComponent,
         FooterComponent,
         HeaderComponent,
-        InvitadoComponent
+        InvitadoComponent,
+        LoginComponent
     ],
     imports: [
         BrowserModule,
@@ -50,7 +48,8 @@ import {AngularFireStorage} from 'angularfire2/storage';
         AngularFireModule.initializeApp(environment.firebase),
         AngularFirestoreModule.enablePersistence(),
         FormsModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        RouterModule.forRoot(routes)
     ],
     providers: [
         AngularFireStorage
